@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on('turbolinks:load', function () {
+  $(".arrow").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $(".next_div").offset().top},
+          'slow');
+      
+  });
+});
