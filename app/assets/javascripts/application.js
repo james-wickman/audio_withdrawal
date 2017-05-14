@@ -19,8 +19,17 @@
 $(document).on('turbolinks:load', function () {
   $(".arrow").on('click', function() {
       $('html,body').animate({
-          scrollTop: $(".next_div").offset().top},
+          scrollTop: $(".intro_section").offset().top},
           'slow');
-      
+
   });
+  $(window).on('scroll', function() {
+  	var scrollPos = $(window).scrollTop();
+  	if (scrollPos > 100) {
+  		$('.arrow').addClass('hidden');
+  	}
+  	else {
+  		$('.arrow').removeClass('hidden');
+  	}
+  })
 });
