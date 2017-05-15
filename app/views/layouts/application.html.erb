@@ -10,6 +10,65 @@
   </head>
 
   <body>
+
+ 	<div id="wrapper">
+        <div class="overlay"></div>
+        
+        <!-- Sidebar -->
+        <nav class="navbar navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <%= link_to raw("<div class='company_name' style='height:80px'></div>"), {controller: "home", action: "index"} %>
+                <% if current_page?(root_path) %>
+                    <li>
+                        <a class="scroll_button home_button">Home<i class='sub_icon glyphicon glyphicon-home'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button products_button">Products<i class='sub_icon glyphicon glyphicon-shopping-cart'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button distribution_button">Distribution<i class='sub_icon glyphicon glyphicon-globe'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button about_us_button">About Us<i class='sub_icon glyphicon glyphicon-plus-sign'></i></a>
+                    </li>
+                    <li>
+                        <a class="scroll_button contact_us_button">Contact Us<i class='sub_icon glyphicon glyphicon-phone-alt'></i></a>
+                    </li>
+                <% else %>
+                    <li>
+                        <%= link_to raw(" Home <i class='glyphicon glyphicon-home push_right'></i>"), {controller: "home", action: "index"} %>
+                    </li>
+                    <li>
+                        <%= link_to raw(" Products <i class='glyphicon glyphicon-shopping-cart push_right'></i>"), {controller: "company", action: "product"} %>
+                    </li>
+                    <li>
+                        <%= link_to raw(" Distribution <i class='glyphicon glyphicon-globe push_right'></i>"), {controller: "company", action: "distribution"} %>
+                    </li>
+                    <li>
+                        <%= link_to raw(" About Us <i class='glyphicon glyphicon-plus-sign push_right'></i>"), {controller: "company", action: "about_us"} %>
+                    </li>
+                    <li>
+                        <%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt push_right'></i>"), {controller: "company", action: "contact_us"} %>
+                    </li>
+                <% end %>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+          </button>
+          
+        </div>
+        <!-- /#page-content-wrapper
+
+    </div>
+    /#wrapper -->
+    <%= yield :javascript %>
     <%= yield %>
   </body>
 </html>

@@ -31,5 +31,74 @@ $(document).on('turbolinks:load', function () {
   	else {
   		$('.arrow').removeClass('hidden');
   	}
-  })
+  });
+  $(".home_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#home").offset().top},
+          'slow');
+  });
+  $(".products_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#products").offset().top},
+          'slow');
+  });
+  $(".distribution_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#distribution").offset().top},
+          'slow');
+  });
+  $(".about_us_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#about_us").offset().top},
+          'slow');
+  });
+  $(".contact_us_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $("#contact_us").offset().top},
+          'slow');
+  });
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = true;
+
+  // $("body").click(function(e) {
+  //   if(isClosed == false){
+  //     if ($(e.target).hasClass('nav')) {
+  //       console.log('false');
+  //         return true;
+  //     }
+  //     else if ($(e.target).hasClass('hamburger')) {
+  //       console.log('false');
+  //         return true;
+  //     }
+  //     else if ($(e.target) == $('[data-toggle="offcanvas"]')) {
+  //       console.log('run')
+  //       return true;
+  //     }
+  //     else{
+  //       run();
+  //     }
+  //   }
+  // })
+    function hamburger_cross() {
+      if (isClosed == false) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = true;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = false;
+      }
+  }
+  function run(e) {
+    $("#wrapper").toggleClass("active");
+    hamburger_cross();
+  }
+  $('[data-toggle="offcanvas"]').click(function(e) {
+      run(e);
+  });
+
 });
