@@ -2,6 +2,6 @@ class ContentController < ApplicationController
   def works
   end
 
-  def cantact_us
+  def contact_us
   end
 end

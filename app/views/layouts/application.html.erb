@@ -45,16 +45,10 @@
                         <%= link_to raw(" Home <i class='glyphicon glyphicon-home push_right'></i>"), {controller: "home", action: "index"} %>
                     </li>
                     <li>
-                        <%= link_to raw(" Products <i class='glyphicon glyphicon-shopping-cart push_right'></i>"), {controller: "company", action: "product"} %>
+                        <%= link_to raw(" Works <i class='glyphicon glyphicon-plus-sign push_right'></i>"), {controller: "content", action: "works"} %>
                     </li>
                     <li>
-                        <%= link_to raw(" Distribution <i class='glyphicon glyphicon-globe push_right'></i>"), {controller: "company", action: "distribution"} %>
-                    </li>
-                    <li>
-                        <%= link_to raw(" About Us <i class='glyphicon glyphicon-plus-sign push_right'></i>"), {controller: "company", action: "about_us"} %>
-                    </li>
-                    <li>
-                        <%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt push_right'></i>"), {controller: "company", action: "contact_us"} %>
+                        <%= link_to raw(" Contact Us <i class='glyphicon glyphicon-phone-alt push_right'></i>"), {controller: "content", action: "contact_us"} %>
                     </li>
                 <% end %>
             </ul>
