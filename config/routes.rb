@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'content/works'
+
+  get 'content/cantact_us'
+
   get 'home/index'
 
   root to: 'home#index'
