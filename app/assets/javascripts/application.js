@@ -34,52 +34,40 @@ $(document).on('turbolinks:load', function () {
   });
   $(".home_button").on('click', function() {
       $('html,body').animate({
-          scrollTop: $("#home").offset().top},
+          scrollTop: $(".home_section").offset().top},
           'slow');
   });
-  $(".products_button").on('click', function() {
+  $(".intro_button").on('click', function() {
       $('html,body').animate({
-          scrollTop: $("#products").offset().top},
+          scrollTop: $(".intro_section").offset().top},
           'slow');
   });
-  $(".distribution_button").on('click', function() {
+  $(".featured_works_button").on('click', function() {
       $('html,body').animate({
-          scrollTop: $("#distribution").offset().top},
+          scrollTop: $(".featured_works_section").offset().top},
           'slow');
   });
-  $(".about_us_button").on('click', function() {
+  $(".works_button").on('click', function() {
       $('html,body').animate({
-          scrollTop: $("#about_us").offset().top},
+          scrollTop: $(".works_section").offset().top},
           'slow');
   });
   $(".contact_us_button").on('click', function() {
       $('html,body').animate({
-          scrollTop: $("#contact_us").offset().top},
+          scrollTop: $(".contact_us_section").offset().top},
           'slow');
   });
+  $(".social_media_button").on('click', function() {
+      $('html,body').animate({
+          scrollTop: $(".social_media_section").offset().top},
+          'slow');
+  });
+
+
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
      isClosed = true;
 
-  // $("body").click(function(e) {
-  //   if(isClosed == false){
-  //     if ($(e.target).hasClass('nav')) {
-  //       console.log('false');
-  //         return true;
-  //     }
-  //     else if ($(e.target).hasClass('hamburger')) {
-  //       console.log('false');
-  //         return true;
-  //     }
-  //     else if ($(e.target) == $('[data-toggle="offcanvas"]')) {
-  //       console.log('run')
-  //       return true;
-  //     }
-  //     else{
-  //       run();
-  //     }
-  //   }
-  // })
     function hamburger_cross() {
       if (isClosed == false) {          
         overlay.hide();
