@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  get 'admin/login'
+  
   resources :admin
 
   get 'content/works'
