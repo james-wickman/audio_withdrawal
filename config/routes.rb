@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :admin
+
   get 'content/works'
 
   get 'content/contact_us'

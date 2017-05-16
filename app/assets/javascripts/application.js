@@ -67,7 +67,6 @@ $(document).on('turbolinks:load', function () {
   var trigger = $('.hamburger'),
       overlay = $('.overlay'),
      isClosed = true;
-
     function hamburger_cross() {
       if (isClosed == false) {          
         overlay.hide();
